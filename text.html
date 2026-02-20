@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/Style.css" >
+<link rel="icon" 
+href="img/favicon.ico" 
+type="image/x-icon"
+>
+<title>droiri</title>
+</head>
+ 
+ <body>
+   <img src="img/logo.png" alt="Logo" width="150">
+
+<h1> meu primeiro site</h1> 
+<p> este site foi destinado para teste de programaçao logo nao a funçao alguma.</p>
+<a href="http://localhost:8158/main.html"> 
+<button> nao clique   </button>
+<div class="button"> 
+</div>
+</a>
+<h2>Calculadora</h2>
+
+<input type="number" id="num1" placeholder="Primeiro número">
+<input type="number" id="num2" placeholder="Segundo número">
+
+<br><br>
+
+<button onclick="somar()">Somar</button>
+<button onclick="subtrair()">Subtrair</button>
+<button onclick="multiplicar()">Multiplicar</button>
+<button onclick="dividir()">Dividir</button>
+
+<p id="resultado">Resultado: </p>
+
+<script>
+function somar() {
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+    document.getElementById("resultado").innerText = "Resultado: " + (a + b);
+}
+
+function subtrair() {
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+    document.getElementById("resultado").innerText = "Resultado: " + (a - b);
+}
+
+function multiplicar() {
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+    document.getElementById("resultado").innerText = "Resultado: " + (a * b);
+}
+
+function dividir() {
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+
+    if (b === 0) {
+        document.getElementById("resultado").innerText = "Não dá pra dividir por zero";
+    } else {
+        document.getElementById("resultado").innerText = "Resultado: " + (a / b);
+    }
+}
+</script>
+<script src=js/index.js>  
+</script>
+</body>
